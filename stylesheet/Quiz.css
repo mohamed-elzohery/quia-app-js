@@ -1,0 +1,138 @@
+:root {
+  --active--color: #0075ff;
+}
+body {
+  font-family: "poppins";
+}
+* {
+  box-sizing: border-box;
+}
+.quiz-container {
+  margin: 20px auto;
+  width: 800px;
+  background: #eee;
+  padding: 20px;
+}
+.question-area{
+  min-height: 400px;
+}
+.quiz-container .answers-area {
+  padding: 20px;
+}
+.quiz-container .answers-area .answer {
+  padding: 15px;
+  background-color: #f6f6f6;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.quiz-container .answers-area .answer:not(:last-child) {
+  border-bottom: 1px solid #f7f7f7;
+}
+.quiz-container .answers-area .answer input[type="radio"]:checked + label {
+  color: var(--active--color);
+}
+.quiz-container .answers-area .answer label {
+  margin-left: 20px;
+  cursor: pointer;
+}
+.current-info {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 15px;
+  align-items: center;
+}
+.current-info .indicator .bullets {
+  flex: 1;
+  height: 20px;
+}
+.current-info .indicator {
+  height: 20px;
+}
+.current-info .indicator .bullets span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #eee;
+  display: inline-block;
+  margin: auto;
+  margin-left: 3px;
+}
+.current-info .indicator .bullets span.complete {
+  background-color: var(--active--color);
+}
+.Submit-button {
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--active--color);
+  padding: 20px;
+  font-weight: lighter;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.Submit-button.disabled {
+  pointer-events: none;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.overlay.hidden {
+  display: none;
+}
+.overlay .result-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  transform: translate(-50%, -50%);
+  z-index: 1500;
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #666;
+  background-color: #fff;
+}
+.overlay .result-window .img-box img {
+  width: 100%;
+}
+.overlay .result-window .img-box {
+  padding: 5px;
+  border: 1px solid #eee;
+}
+.overlay .result-window p {
+  font-size: 20px;
+  text-align: center;
+}
+.overlay .result-window p span {
+  color: var(--active--color);
+}
+.overlay .result-window .restart {
+  text-align: center;
+  padding: 5px 12px;
+  background-color: var(--active--color);
+  font-size: 24px;
+  font-weight: lighter;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  height: 50px;
+  width: 70%;
+  line-height: 40px;
+  letter-spacing: 0.15em;
+  margin: auto;
+}
+.overlay .result-window .restart i {
+  margin-left: 10px;
+  font-size: 18px;
+}

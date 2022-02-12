@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="Discription" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template HTML/JS/CSS</title>
+    <link rel="stylesheet" href="stylesheet/all.min.css" />
+    <link rel="stylesheet" href="stylesheet/Quiz.css" />
+    <link rel="stylesheet" href="stylesheet/normalize.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <style></style>
+  </head>
+  <body>
+    <div class="header"></div>
+    <div class="quiz-container">
+      <div class="quiz-area">
+        <div class="question-area"></div>
+      </div>
+      <div class="current-info">
+        <div class="indicator">
+          <div class="bullets"></div>
+        </div>
+        <div class="counter">
+          <span class="minutes">00</span> : <span class="seconds"></span>
+        </div>
+      </div>
+      <div class="Submit-button">Submit Answers</div>
+    </div>
+    <div class="overlay hidden">
+      <div class="result-window">
+        <div class="img-box">
+          <img src="./img/end-photo.jpg" />
+        </div>
+        <p>You got <span class="right-no"> </span>of 10</p>
+        <span class="restart">Play Again <i class="fas fa-redo"></i></span>
+      </div>
+    </div>
+
+    <script src="Quiz.js"></script>
+  </body>
+</html>
